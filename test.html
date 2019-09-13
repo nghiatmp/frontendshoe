@@ -15,7 +15,7 @@
           border: 1px solid black;
           list-style: none;
         }
-        #dropdown{
+        .dropdown{
           display: none;
           /* position: absolute; */
         }
@@ -27,24 +27,26 @@
   <div class="row">
        <div class="col-lg-3">
               <ul>
-                <li id="parent">
+                <li class="parent">
                      giay
-                     <ul id="dropdown">
+                     <ul class="dropdown">
                        <li>dep</li>
                        <li>quan</li>
                      </ul>
                 </li>
-                <li>
+                <li class="parent">
                      giay
+                     <ul class="dropdown">
+                       <li>dep</li>
+                       <li>quan</li>
+                     </ul>
                 </li>
-                <li>
+                <li class="parent">
                      giay
-                </li>
-                <li>
-                     giay
-                </li>
-                <li>
-                     giay
+                     <ul class="dropdown">
+                       <li>dep</li>
+                       <li>quan</li>
+                     </ul>
                 </li>
 
 
@@ -55,8 +57,9 @@
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script type="text/javascript">
-   $('#parent').click(function(){
-      $('#dropdown').toggle('show');
+   $('.parent').click(function(){
+    
+    $('.dropdown').toggle('show');
    });
 </script>
 </body>

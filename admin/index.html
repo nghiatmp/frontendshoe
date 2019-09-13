@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="../CSS/Font/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="CSS/style.css">
+</head>
+<body>
+	<div class="dropdown-header">
+		<div class="row">
+			<div class="col-lg-4">
+				<img width="200px" src="CSS/images/logo.png" alt="">
+			</div>
+			<div class="col-lg-8">
+				<div class="row">
+					<div class="col-lg-11">
+						
+					</div>
+					<div class="col-lg-1">
+						<div class="nav-item dropdown">
+					        <a style="color: black" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					         <i class="fa fa-user fa-fw" aria-hidden="true" style="font-size: 25px; color: black"></i>
+					        </a>
+					        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					          <a class="dropdown-item" href="#"><i class="fa fa-user fa-fw"></i> Le Nghia </a>
+					          <a class="dropdown-item" href="#"><i class="fa fa-cog" aria-hidden="true"></i> Setting </a>
+					          <div class="dropdown-divider"></div>
+					          <a class="dropdown-item" href="#"><i class="fa fa-user-circle-o" aria-hidden="true"></i> LogOut</a>
+					        </div>
+					      </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="content">
+		<div class="row">
+			<div class="col-lg-4">
+				<ul>
+					<li class="parent">
+						Thương Hiệu Gìay
+						<ul  class="child">
+							<li><a href="" title="">Danh Sách Loại Giầy</a></li>
+							<li><a href="" title="">Thêm Loại Giầy</a></li>
+						</ul>
+					</li>
+					<li class="parent">
+						Sản Phẩm
+						<ul  class="child">
+							<li><a href="" title="">Danh Sách Sản Phẩm</a></li>
+							<li><a href="" title="">Nhập Hàng</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div class="col-lg-8">
+				
+			</div>
+		</div>
+	</div>
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+   $('.parent').click(function(){
+   		$('.parent > .child').toggle('show');
+      
+   });
+   $(document).ready(function($) {    
+		$(window).scroll(function(){
+			if($(this).scrollTop()>30){
+			$(".dropdown-header").addClass('fixNav')
+			}else{
+				$(".dropdown-header").removeClass('fixNav')
+			}}
+		)
+	})
+</script>
+
+</body>
+</html>

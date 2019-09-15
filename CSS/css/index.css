@@ -26,7 +26,7 @@ header .container ul li{
 /* endlogo---------------------------------------- */
 /* menu--------------------------------------- */
 .menu{
-	background-color: #3C3838;
+	background-color: #ABC9E2;
 
 }
 .fixNav {
@@ -34,20 +34,55 @@ header .container ul li{
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 100000000;
+    z-index: 1000;
 }
 .menu .container ul{
-	margin: 15px;
+	margin-bottom: 0px;
 }
 .menu .container ul li{
 	display: inline-block;
-	margin: 7px 12px;
+    padding: 7px 12px;      
 	font-size: 20px;
+    position: relative
 }
 .menu .container ul li a{
-	color: white;
+	color: black;
 }
-
+.menu .container ul li ul.dropdown{
+    display: none;
+    width: 200px;
+    background-color: #ABC9E2;
+    z-index: 10000;
+    padding-left: 0px;
+}
+.menu .container ul li ul.dropdown li{
+    display: block;
+    padding: 20px 15px;
+    border-bottom: 1px dotted gray;
+}
+.menu .container ul li ul.dropdown li a{
+    padding-left: 20px;
+}
+.menu .container ul li:hover > ul.dropdown{
+    display: block;
+    position: absolute;
+    left:0;
+    top:42px;
+    text-align:left;
+}
+.menu .container ul li:hover > ul.dropdown a{
+    text-decoration: none;
+}
+.menu .container ul li ul.dropdown > li:hover {
+    background-color:#D8F1ED;
+}
+.menu .container ul li ul.dropdown li:hover >a{
+   /*  color: violet; */
+}
+.menu .container ul li ul.dropdown li ul.dropdown{
+    left:200px;
+    top: 0px;
+}
 /* endmenu--------------------------------- */
 /* left------------------------------- */
 .content .search{
@@ -80,6 +115,9 @@ header .container ul li{
 
 /* endleft------------------------------ */
 /* right */
+.product:hover{
+    transform: scale(1.1,1.1);
+}
 .flash-del{
 	text-decoration: line-through;
 	font-size: 20px;
@@ -145,12 +183,15 @@ transform: scale(1.4,1.4);
 
 /* css thuong hieu */
 .thuonghieu ul{
-    margin-left: 15px;  
+    margin-left: 0px;  
 }
 .thuonghieu ul li{
     display: inline-block;
     text-decoration: none;
-    margin: 5px 10px;
+    margin: 0px 10px;
+}
+.thuonghieu img:hover{
+    transform: scale(1.4,1.4);
 }
 /*  end css thuong hieu*/
 
